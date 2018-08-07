@@ -1,0 +1,94 @@
+#gmail:hover, #gmail:active {
+	background-color: #A42F23;
+}
+
+#kalender:hover, #kalender:active {
+	background-color: #2D5DCC;
+}
+
+#elba:hover, #elba:active {
+	color: #000000;
+	background-color: #FFFF00;
+}
+
+#elba:hover > img, #elba:active > img {
+	filter: invert(0);
+}
+
+#whatsapp:hover, #whatsapp:active {
+	background-color: #26AB1A;
+}
+
+#fh:hover, #fh:active {
+	background-color: #017FC8;
+}
+
+#facebook:hover, #facebook:active {
+	background-color: #4267B2;
+}
+
+#yt:hover, #yt:active {
+	background-color: #FF0000;
+}
+
+#reddit:hover, #reddit:active {
+	background-color: #FF4400;
+}
+
+#twitch:hover, #twitch:active {
+	background-color: #6441A4;
+}
+
+#spotify:hover, #spotify:active {
+	background-color: #23CF5F;
+}
+
+#imdb:hover, #imdb:active {
+	color: #000000;
+	background-color: #F5C518;
+}
+
+#imdb:hover > img, #imdb:active > img {
+	filter: invert(0);
+}
+
+#amazon:hover, #amazon:active {
+	background-color: #FF9900;
+}
+
+#ebay:hover, #ebay:active {
+	color: #000000;
+	background-color: #ffffff;
+}
+
+#ebay:hover > img, #ebay:active > img {
+	filter: invert(0);
+}
+
+#geizhals:hover, #geizhals:active {
+	background-color: #003D92;
+}
+
+#paypal:hover, #paypal:active {
+	background-color: #40B5E6;
+}
+
+#deluged:hover, #deluged:active {
+	background-color: #1C4176;
+}
+
+#rarbg:hover, #rarbg:active {
+	background-color: #385FBA;
+}
+
+#tpb:hover, #tpb:active {
+	background-color: #5A3C22;
+}
+
+#op:hover, #op:active {
+	background-color: #1EA1F7;
+}
+
+#probuilds:hover, #probuilds:active {
+	background-color: #C3B853;
+}
