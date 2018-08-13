@@ -1,4 +1,4 @@
-var wien = 'http://api.openweathermap.org/data/2.5/weather?id=2779469&units=metric&appid=1ee97b4a473d24d39c84f968d128f789'
+var wien = 'https://api.openweathermap.org/data/2.5/weather?id=2779469&units=metric&appid=1ee97b4a473d24d39c84f968d128f789'
 var xmlhttp1 = new XMLHttpRequest()
 
 xmlhttp1.onreadystatechange = function () {
