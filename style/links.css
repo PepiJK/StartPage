@@ -15,6 +15,10 @@
 	filter: invert(0);
 }
 
+#github:hover, #github:active {
+	background-color: #24292E;
+}
+
 #whatsapp:hover, #whatsapp:active {
 	background-color: #26AB1A;
 }
@@ -91,4 +95,8 @@
 
 #probuilds:hover, #probuilds:active {
 	background-color: #C3B853;
+}
+
+#upc:hover, #upc:active {
+	background-color: #3244AA;
 }
