@@ -2,8 +2,8 @@ var wien = 'https://api.openweathermap.org/data/2.5/weather?id=2779469&units=met
 var xmlhttp1 = new XMLHttpRequest();
 
 xmlhttp1.onreadystatechange = function () {
-  if (this.readyState === 4 && this.status === 200) {
-    var a = JSON.parse(this.responseText);
+  if (xmlhttp1.readyState == 4 && xmlhttp1.status == 200) {
+    var a = JSON.parse(xmlhttp1.responseText);
     output1(a);
   }
 }
