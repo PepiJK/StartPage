@@ -97,6 +97,14 @@
 	background-color: #C3B853;
 }
 
+#moodle:hover, #moodle:active {
+	background-color: #00689E;
+}
+
+#fmovies:hover, #fmovies:active {
+	background-color: #01ACC1;
+}
+
 #upc:hover, #upc:active {
 	background-color: #3244AA;
 }
