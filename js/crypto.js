@@ -4,12 +4,21 @@ var xmlhttp2 = new XMLHttpRequest();
 xmlhttp2.onreadystatechange = function () {
   if (xmlhttp2.readyState == 4 && xmlhttp2.status == 200) {
     var b = JSON.parse(xmlhttp2.responseText);
-    output2(b);
+    outputCrypto(b);
   }
 }
 xmlhttp2.open('GET', btc, true);
 xmlhttp2.send();
 
-function output2 (data) {
-  document.getElementById('btc').innerHTML = '<a href="https://coinmarketcap.com/"><img src="img/btc.png">' + 'BTC: ' + data.EUR.toFixed(2) + '€</a>';
+function convertToCurrencyEur(price) {
+  const formatterEur = new Intl.NumberFormat("de-DE", {
+    style: "currency",
+    currency: "EUR",
+    minimumFractionDigits: 2
+  });
+  return formatterEur.format(price);
+}
+
+function outputCrypto(data) {
+  document.getElementById('crypto').innerHTML = 'BTC ' + convertToCurrencyEur(data.EUR);
 }

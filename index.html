@@ -1,170 +1,203 @@
 <!DOCTYPE html>
 <html lang="de">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>StartPage</title>
-		<link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
-		<link rel="stylesheet" type="text/css" href="style/style.css">
-		<link rel="stylesheet" type="text/css" href="style/links.css">
-		<script src="js/timedate.js"></script>
-		<script src="js/crypto.js"></script>
-		<script src="js/weather.js"></script>
-	</head>
 
-	<body>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>StartPage</title>
+	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&display=swap" rel="stylesheet">
+	<link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+	<link rel="stylesheet" type="text/css" href="style/links.css">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/pepistrap.css">
+	<script src="js/timedate.js" defer></script>
+	<script src="js/crypto.js" defer></script>
+	<script src="js/weather.js" defer></script>
+</head>
 
-		<div id="time"></div>
-		<div id="date"></div>
-
-		<div id="info-container">
-			<div id="btc"></div>
-			<div id="weather"></div>
+<body>
+	<div class="sp-container mx-auto mt-3 mt-sm-5">
+		<div class="d-flex flex-column align-items-center">
+			<div id="time" class="sp-h1 font-weight-bold "></div>
+			<div id="date" class="sp-h2 font-weight-bold text-center "></div>
 		</div>
-
-		<div id="search">
-			<form method="get" action="https://duckduckgo.com">
-				<input name="q" autofocus="" placeholder="Search..." autocomplete="off" type="text">
+		<div class="d-flex flex-column mt-3 mt-sm-5">
+			<div class="d-flex flex-column flex-sm-row align-items-center justify-content-between">
+				<a class="sp-link" href="https://coinmarketcap.com/">
+					<div class="sp-h3 font-weight-bold py-2"><img width="25" src="img/bitcoin.svg" class="sp-filter-invertshadow mr-2"><span
+							id="crypto" class="sp-infolink-hover"></span>
+					</div>
+				</a>
+				<a class="sp-link" href="https://at.wetter.com/oesterreich/wien/floridsdorf/ATAT10678018.html">
+					<div class="sp-h3 font-weight-bold py-2"><span id="weather"></span></div>
+				</a>
+			</div>
+			<form class="mt-3 mt-sm-0" method="get" action="https://duckduckgo.com">
+				<label for="seach-input"></label>
+				<input class="bs-border-box w-100 sp-text-color sp-search" id="search-input" name="q" autofocus="" placeholder="Search..."
+					autocomplete="off" type="text">
 			</form>
 		</div>
-
-		<div id="link-container">
-			
-			<ul class="link-blocks">
-				<h1>Personal</h1><hr>
-				<a href="https://mail.google.com/">
-					<li id="gmail">
-						<img src="img/gmail.svg">gmail
-					</li>
-				</a>
-				<a href="https://calendar.google.com/">
-					<li id="kalender">
-						<img src="img/calendar.svg">kalender
-					</li>
-				</a>
-				<a href="https://cis.technikum-wien.at/cis/index.php">
-					<li id="fh">
-						<img src="img/fh.svg">fh technikum
-					</li>
-				</a>
-				<a href="https://moodle.technikum-wien.at/my/">
-					<li id="moodle">
-						<img src="img/moodle.svg">moodle
-					</li>
-				</a>
-				<a href="https://banking.raiffeisen.at/">
-					<li id="elba">
-						<img src="img/elba.svg">elba
-					</li>
-				</a>
-				<a href="https://web.whatsapp.com/">
-					<li id="whatsapp">
-						<img src="img/whatsapp.svg">whatsapp
-					</li>
-				</a>
-				<a href="https://github.com/PepiJK">
-					<li id="github">
-						<img src="img/github.svg">github
-					</li>
-				</a>
-			</ul>
-
-			<ul class="link-blocks">
-				<h1>Fun</h1><hr>
-				<a href="https://www.facebook.com/">
-					<li id="facebook">
-						<img src="img/facebook.svg">facebook
-					</li>
-				</a>
-				<a href="https://www.youtube.com/feed/subscriptions?flow=2">
-					<li id="yt">
-						<img src="img/youtube.svg">youtube
-					</li>
-				</a>
-				<a href="https://www.reddit.com/">
-					<li id="reddit">
-						<img src="img/reddit.svg">reddit
-					</li>
-				</a>
-				<a href="https://www.twitch.tv/">
-					<li id="twitch">
-						<img src="img/twitch.svg">twitch
-					</li>
-				</a>
-				<a href="https://open.spotify.com/browse/featured">
-					<li id="spotify">
-						<img src="img/spotify.svg">spotify
-					</li>
-				</a>
-				<a href="https://www.imdb.com/">
-					<li id="imdb">
-						<img src="img/imdb.svg">imdb
-					</li>
-				</a>
-				<a href="https://www3.fmovies.to/">
-					<li id="fmovies">
-						<img src="img/fmovies.svg">fmovies
-					</li>
-				</a>
-			</ul>
-
-			<ul class="link-blocks">
-				<h1>Shopping</h1><hr>
-				<a href="https://smile.amazon.de/">
-					<li id="amazon">
-						<img src="img/amazon.svg">amazon
-					</li>
-				</a>
-				<a href="https://www.ebay.de/">
-					<li id="ebay">
-						<img src="img/ebay.svg">ebay
-					</li>
-				</a>
-				<a href="https://geizhals.at/">
-					<li id="geizhals">
-						<img src="img/geizhals.svg">geizhals
-					</li>
-				</a>
-				<a href="https://www.paypal.com/">
-					<li id="paypal">
-						<img src="img/paypal.svg">paypal
-					</li>
-				</a>
-			</ul>
-
-			<ul class="link-blocks">
-				<h1>Misc</h1><hr>
-				<a href="http://192.168.0.102:8112/">
-					<li id="deluged">
-						<img src="img/deluged.svg">deluged
-					</li>
-				</a>
-				<a href="https://rarbg2018.org/torrents.php">
-					<li id="rarbg">
-						<img src="img/rarbg.svg">rarbg
-					</li>
-				</a>
-				<a href="https://proxyfl.info/">
-					<li id="tpb">
-						<img src="img/piratebay.svg">the pirate bay
-					</li>
-				</a>
-				<a href="http://euw.op.gg/summoner/userName=DaBauernSupport">
-					<li id="op">
-						<img src="img/op.gg.svg">op.gg
-					</li>
-				</a>
-				<a href="https://probuilds.net/">
-					<li id="probuilds">
-						<img src="img/probuilds.svg">probuilds
-					</li>
-				</a>
-				<a href="http://192.168.0.1/common_page/login.html">
-					<li id="upc">
-						<img src="img/upc.svg">upc connectbox
-					</li>
-				</a>
-			</ul>
+		<div class="row d-flex flex-wrap mt-3 mt-sm-5">
+			<div class="d-flex sp-flex-basis p-3">
+				<div class="d-flex flex-column sp-linkcontainer pb-2">
+					<div class="sp-h2 font-weight-bold text-center p-1">Personal</div>
+					<hr class="sp-hr">
+					<a class="sp-link" href="https://mail.google.com/mail/u/0/#inbox">
+						<div id="gmail" class="pl-4 py-2 d-flex align-items-center">
+							<img class="sp-filter-invertshadow" width="30" src="img/links/gmail.svg">
+							<span class="sp-h3 ml-2">gmail</span>
+						</div>
+					</a>
+					<a class="sp-link" href="https://calendar.google.com/calendar/r">
+						<div id="kalender" class="pl-4 py-2 d-flex align-items-center">
+							<img class="sp-filter-invertshadow" width="30" src="img/links/calendar.svg">
+							<span class="sp-h3 ml-2">kalender</span>
+						</div>
+					</a>
+					<a class="sp-link" href="https://cloud.pepnet.at">
+						<div id="nextcloud" class="pl-4 py-2 d-flex align-items-center">
+							<img class="sp-filter-invertshadow" width="30" src="img/links/nextcloud.svg">
+							<span class="sp-h3 ml-2">nextcloud</span>
+						</div>
+					</a>
+					<a class="sp-link" href="https://cis.technikum-wien.at/cis/index.html">
+						<div id="fh" class="pl-4 py-2 d-flex align-items-center">
+							<img class="sp-filter-invertshadow" width="30" src="img/links/fh.svg">
+							<span class="sp-h3 ml-2">cis</span>
+						</div>
+					</a>
+					<a class="sp-link" href="https://moodle.technikum-wien.at/">
+						<div id="moodle" class="pl-4 py-2 d-flex align-items-center">
+							<img class="sp-filter-invertshadow" width="30" src="img/links/moodle.svg">
+							<span class="sp-h3 ml-2">moodle</span>
+						</div>
+					</a>
+					<a class="sp-link" href="https://sso.raiffeisen.at/login">
+						<div id="elba" class="pl-4 py-2 d-flex align-items-center">
+							<img class="sp-filter-invertshadow" width="30" src="img/links/elba.svg">
+							<span class="sp-h3 ml-2">elba</span>
+						</div>
+					</a>
+					<a class="sp-link" href="https://www.whatsapp.com/">
+						<div id="whatsapp" class="pl-4 py-2 d-flex align-items-center">
+							<img class="sp-filter-invertshadow" width="30" src="img/links/whatsapp.svg">
+							<span class="sp-h3 ml-2">whatsapp</span>
+						</div>
+					</a>
+					<a class="sp-link" href="https://github.com/">
+						<div id="github" class="pl-4 py-2 d-flex align-items-center">
+							<img class="sp-filter-invertshadow" width="30" src="img/links/github.svg">
+							<span class="sp-h3 ml-2">github</span>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="d-flex sp-flex-basis p-3">
+				<div class="d-flex flex-column sp-linkcontainer pb-2">
+					<div class="sp-h2 font-weight-bold text-center p-1">Alphaw</div>
+					<hr class="sp-hr">
+					<a class="sp-link" href="https://mail.google.com/mail/u/1/#inbox">
+						<div id="gmail" class="pl-4 py-2 d-flex align-items-center">
+							<img class="sp-filter-invertshadow" width="30" src="img/links/gmail.svg">
+							<span class="sp-h3 ml-2">gmail</span>
+						</div>
+					</a>
+					<a class="sp-link" href="https://www.alphaw.at">
+						<div id="alphaw" class="pl-4 py-2 d-flex align-items-center">
+							<img class="sp-filter-invertshadow" width="30" src="img/links/alphaw.png">
+							<span class="sp-h3 ml-2">alphaw</span>
+						</div>
+					</a>
+					<a class="sp-link" href="https://gitlab.alphaw.at/">
+						<div id="gitlab" class="pl-4 py-2 d-flex align-items-center">
+							<img class="sp-filter-invertshadow" width="30" src="img/links/gitlab.svg">
+							<span class="sp-h3 ml-2">gitlab</span>
+						</div>
+					</a>
+					<a class="sp-link" href="https://trello.com/josefkoch1/boards">
+						<div id="trello" class="pl-4 py-2 d-flex align-items-center">
+							<img class="sp-filter-invertshadow" width="30" src="img/links/trello.svg">
+							<span class="sp-h3 ml-2">trello</span>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="d-flex sp-flex-basis p-3">
+				<div class="d-flex flex-column sp-linkcontainer pb-2">
+					<div class="sp-h2 font-weight-bold text-center p-1">Fun</div>
+					<hr class="sp-hr">
+					<a class="sp-link" href="https://www.reddit.com/">
+						<div id="reddit" class="pl-4 py-2 d-flex align-items-center">
+							<img class="sp-filter-invertshadow" width="30" src="img/links/reddit.svg">
+							<span class="sp-h3 ml-2">reddit</span>
+						</div>
+					</a>
+					<a class="sp-link" href="https://www.youtube.com/feed/subscriptions">
+						<div id="yt" class="pl-4 py-2 d-flex align-items-center">
+							<img class="sp-filter-invertshadow" width="30" src="img/links/youtube.svg">
+							<span class="sp-h3 ml-2">youtube</span>
+						</div>
+					</a>
+					<a class="sp-link" href="https://mail.google.com/">
+						<div id="twitch" class="pl-4 py-2 d-flex align-items-center">
+							<img class="sp-filter-invertshadow" width="30" src="img/links/twitch.svg">
+							<span class="sp-h3 ml-2">twitch</span>
+						</div>
+					</a>
+					<a class="sp-link" href="https://mail.google.com/">
+						<div id="spotify" class="pl-4 py-2 d-flex align-items-center">
+							<img class="sp-filter-invertshadow" width="30" src="img/links/spotify.svg">
+							<span class="sp-h3 ml-2">spotify</span>
+						</div>
+					</a>
+					<a class="sp-link" href="https://www9.fmovies.to/">
+						<div id="fmovies" class="pl-4 py-2 d-flex align-items-center">
+							<img class="sp-filter-invertshadow" width="30" src="img/links/fmovies.svg">
+							<span class="sp-h3 ml-2">fmovies</span>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="d-flex sp-flex-basis p-3">
+				<div class="d-flex flex-column sp-linkcontainer pb-2">
+					<div class="sp-h2 font-weight-bold text-center p-1">Misc</div>
+					<hr class="sp-hr">
+					<a class="sp-link" href="https://www9.fmovies.to/">
+						<div id="amazon" class="pl-4 py-2 d-flex align-items-center">
+							<img class="sp-filter-invertshadow" width="30" src="img/links/amazon.svg">
+							<span class="sp-h3 ml-2">amazon</span>
+						</div>
+					</a>
+					<a class="sp-link" href="https://pepnet.at:8112/">
+						<div id="deluged" class="pl-4 py-2 d-flex align-items-center">
+							<img class="sp-filter-invertshadow" width="30" src="img/links/deluged.svg">
+							<span class="sp-h3 ml-2">deluged</span>
+						</div>
+					</a>
+					<a class="sp-link" href="https://piratebay-proxylist.se/">
+						<div id="tpb" class="pl-4 py-2 d-flex align-items-center">
+							<img class="sp-filter-invertshadow" width="30" src="img/links/piratebay.svg">
+							<span class="sp-h3 ml-2">the pirate bay</span>
+						</div>
+					</a>
+					<a class="sp-link" href="https://www.rarbg.to">
+						<div id="rarbg" class="pl-4 py-2 d-flex align-items-center">
+							<img class="sp-filter-invertshadow" width="30" src="img/links/rarbg.svg">
+							<span class="sp-h3 ml-2">rargb</span>
+						</div>
+					</a>
+					<a class="sp-link" href="http://192.168.0.1/common_page/login.html">
+						<div id="upc" class="pl-4 py-2 d-flex align-items-center">
+							<img class="sp-filter-invertshadow" width="30" src="img/links/upc.svg">
+							<span class="sp-h3 ml-2">connectbox</span>
+						</div>
+					</a>
+				</div>
+			</div>
 		</div>
-	</body>
+	</div>
+
+</body>
+
 </html>

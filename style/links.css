@@ -6,12 +6,16 @@
 	background-color: #2D5DCC;
 }
 
+#elba:hover span, #elba:active span {
+	text-shadow: none;
+}
+
 #elba:hover, #elba:active {
 	color: #000000;
 	background-color: #FFFF00;
 }
 
-#elba:hover > img, #elba:active > img {
+#elba:hover>img, #elba:active>img {
 	filter: invert(0);
 }
 
@@ -52,7 +56,7 @@
 	background-color: #F5C518;
 }
 
-#imdb:hover > img, #imdb:active > img {
+#imdb:hover>img, #imdb:active>img {
 	filter: invert(0);
 }
 
@@ -65,7 +69,7 @@
 	background-color: #ffffff;
 }
 
-#ebay:hover > img, #ebay:active > img {
+#ebay:hover>img, #ebay:active>img {
 	filter: invert(0);
 }
 
@@ -107,4 +111,20 @@
 
 #upc:hover, #upc:active {
 	background-color: #3244AA;
+}
+
+#gitlab:hover, #gitlab:active {
+	background-color: #E54632;
+}
+
+#trello:hover, #trello:active {
+	background-color: #0078BE;
+}
+
+#alphaw:hover, #alphaw:active {
+	background-color: #E8630A;
+}
+
+#nextcloud:hover, #nextcloud:active {
+	background-color: #0082C9;
 }
