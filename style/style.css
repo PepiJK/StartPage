@@ -32,6 +32,17 @@ body {
 	margin-bottom: -3px;
 }
 
+.sp-filter-invertshadow {
+	filter: invert(1) drop-shadow(2px 2px rgba(21, 21, 21, 1));
+}
+
+.sp-filter-invertshadow:hover+.sp-infolink-hover {
+	display: inline-block;
+	text-decoration: none;
+	border-bottom: 3px solid white;
+	margin-bottom: -3px;
+}
+
 .sp-search {
 	border: none;
 	box-shadow: 0px 5px 5px -3px #151515;
@@ -43,14 +54,6 @@ body {
 	padding: 15px 10px 15px 45px;
 	font-size: 1.25rem;
 	line-height: 1.2;
-}
-
-.sp-text-color {
-	color: #151515;
-}
-
-.sp-filter-invertshadow {
-	filter: invert(1) drop-shadow(2px 2px rgba(21, 21, 21, 1));
 }
 
 .sp-filter-shadow {
